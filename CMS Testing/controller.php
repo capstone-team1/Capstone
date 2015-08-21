@@ -2,21 +2,20 @@
 
 require_once("database.php");
 require_once("blog_class.php");
+require_once("image_class.php");
 
-if (isset($_GET['action'])){
-    $action = $_GET['action'];
-}else {
-    $action = 'list';
-}
+if (isset($_POST['add_image'])) $action = $_POST['add_image'];
+if (isset($_POST['add_blog'])) $action = $_POST['add_blog'];
+
 //Object Oriented..WORKS!!
 
 switch($action) {
 
-    case "add_blog":
+    case "Add Blog":
         $blog_post = new Blog(get_date_sql_format(),
-            $_GET['blog_title'],
-            $_GET['blog_image'],
-            $_GET['blog_content']);
+            $_POST['blog_title'],
+            $_POST['blog_image'],
+            $_POST['blog_content']);
 
         //print $blog_post->get_blog_content();
 
@@ -33,12 +32,12 @@ switch($action) {
 
         break;
 
-    case "add_image":
+    case "Add Image":
         $add_image = new Image(get_date_sql_format(),
-            $_GET['image_title'],
-            $_GET['image_type'],
-            $_GET['image_tags'],
-            $_GET['image']);
+            $_POST['image_title'],
+            $_POST['image_type'],
+            $_POST['image_tags'],
+            $_POST['image']);
 
         $image_date = $add_image->get_image_date();
         $image_title = $add_image->get_image_title();
@@ -54,58 +53,3 @@ switch($action) {
 
         break;
 }
-
-
-/*NON OOP
-$blog_date = get_date_sql_format();
-$blog_title = $_GET['blog_title'];
-$blog_image = $_GET['blog_image'];
-$blog_content = $_GET['blog_content'];
-
-
-$sql = "INSERT INTO blogs (blog_post_date, blog_title, blog_image, blog_content)
-                  VALUES ('$blog_date','$blog_title', '$blog_image', '$blog_content')";
-
-$query = $db->prepare($sql);
-$query->execute();
-
-echo "added";
-
-*/
-
-
-/*if (isset($_GET['action'])){
-    $action = $_GET['action'];
-}else{
-    echo "Didn't work";
-}
-
-switch($action){
-
-    case "add_bl":
-        new Blog(get_blog_date(),
-                $_POST['blog_title'],
-                $_POST['blog_image'],
-                $_POST['blog_content']
-        );
-        $query = $db->prepare("INSERT INTO blogs (blog_post_date, blog_title, blog_image,blog_content)
-                  VALUES ('$this->date', '$this->title', '$this->image', '$this->content')");
-        $query->execute();
-
-        break;
-
-    case "add_blog":
-
-        $blog_title = $_GET['blog_title'];
-        echo $blog_title;
-
-        $sql = "INSERT INTO blogs (blog_title)
-                  VALUES ('$blog_title')";
-
-        $query = $db->prepare($sql);
-        $query->execute();
-        echo "added";
-
-        break;
-}
-*/

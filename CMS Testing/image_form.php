@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="add_image">
-    <form method="GET" action="controller.php">
+    <form method="post" action="controller.php">
         <label>Image Title</label>
         <input type="text" name="image_title">
         <br>

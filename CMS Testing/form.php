@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="add_blog">
-    <form method="GET" action="controller.php">
+    <form method="post" action="controller.php">
         <label>Blog Title</label>
         <input type="text" name="blog_title">
         <br>
