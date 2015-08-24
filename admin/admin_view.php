@@ -68,22 +68,6 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <!-- <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Blogs</h1>
-                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                    <button type="button" class="btn btn-primary" id="add_new_blog">Add New Blog</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10" id="list_blogs"></div>
-                <div class="col-lg-1"></div>
-            </div>
-        </div>
-    </div>
-    <!-- /#page-content-wrapper -->
 
 </div>
 <!-- /#wrapper -->

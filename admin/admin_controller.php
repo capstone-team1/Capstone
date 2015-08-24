@@ -13,7 +13,7 @@ if (isset($_GET['action'])){
 
 switch($action){
 
-    case "list_Blogs":
+    case "list_blogs":
 
         class Blog_content{
             public $image;
@@ -44,7 +44,7 @@ switch($action){
 
         break;
 
-    case "list_Images":
+    case "list_images":
 
         class Image_content{
             public $image;
