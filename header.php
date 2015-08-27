@@ -104,12 +104,13 @@
                </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
-        </nav>
+        </nav> <!-- end nav -->
 
         <!-- THIS IS LARGE BLURRED IMAGE UNDER NAV BAR
             <div class="blurred-container">
                 <div class="img-src" style="background-image: url('assets/img/wallpaper1.jpg')"></div>
             </div> -->
-    </div><!-- end navbar -->
+    </div><!-- END navbar -->
 
-</div> <!-- end menu-dropdown -->
+</div> <!-- END navbar-full -->
+

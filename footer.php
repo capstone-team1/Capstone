@@ -13,15 +13,15 @@
                         <div class="col-sm-4">
                             <h3>Col 3</h3>
                         </div>
-                    </div>
+                    </div> <!-- END row support -->
                     <div class="row">
                         <div class="credits">
                             &copy; 2015 Amanda Orcutt
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        </div> <!-- END credits -->
+                    </div> <!-- END row -->
+                </div> <!-- END container -->
+            </div> <!-- END overlayer -->
+        </div> <!-- END footer -->
 
     </body>
 

@@ -1,147 +1,24 @@
-<<<<<<< Updated upstream
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Tattoo's by Amanda</title>
-    <!-- here is the favicon link - according to all i've read it should be kept in the root folder -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    
-	<link href="assets/css/get-shit-done.css" rel="stylesheet" />
-    <link href="assets/css/demo.css" rel="stylesheet" />
-
-    <!--     Custom Google Fonts, "Shadows into Light", "Permenant Marker" -->
-    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Permanent+Marker' rel='stylesheet' type='text/css'>
-
-    <!--     Font Awesome     -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <!--Parallax JS-->
-    <script src="/Capstone/assets/js/parallax.js" type=text/javascript></script>
-
-    <!--JQuery-->
-    <script src="assets/jquery/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-    <!--Bootstrap and gsdk-->
-    <script src="assets/js/bootstrap.js" type="text/javascript"></script>
-    <script src="assets/js/gsdk-checkbox.js"></script>
-    <script src="assets/js/gsdk-radio.js"></script>
-    <script src="assets/js/gsdk-switch.js"></script>
-    <script src="assets/js/get-shit-done.js"></script>
-    <script src="assets/js/custom.js"></script>
-
-    <!--FACBOOK INIT-->
-    <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-</head>
-
-<body>
- <div id="navbar-full">
-    <div id="navbar">
-    <!--    
-        navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange  
-=======
 <!--FACBOOK INIT-->
 <div id="fb-root"></div>
-
-<script>
-    (function(d, s, id) {
+    <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-</script>
+    </script>
+<div id="fb-root"></div>
 
-<?php include ("header.php"); ?>
+<?php include_once ("header.php"); ?>
 
-    <!-- START CAROUSEL -->
-    <div id="carousel">
-        <!--
-                IMPORTANT - This carousel can have a special class for a smooth transition "gsdk-transition".
-                Since javascript cannot be overwritten, if you want to use it, you can use the bootstrap.js
-                 or bootstrap.min.js from the GSDKit or you can open your bootstrap.js file, search for
-                  "emulateTransitionEnd(600)" and change it with "emulateTransitionEnd(1200)"
->>>>>>> Stashed changes
-        -->
-        <div id="carousel-example-generic" class="carousel slide gsdk-transition" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item">
-              <img src="assets/img/snake-wide.jpg">
-            </div>
-            <div class="item active">
-              <img src="assets/img/snake-wide.jpg">
-            </div>
-<<<<<<< Updated upstream
-        
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Tattoos</a></li>
-                        <li><a href="#">Drawings</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
-                </li>
-                <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Links</a></li>
-                  <li><a href="#">Store</a></li>
-                <li>
-                    <a href="javascript:void(0);" data-toggle="search" class="hidden-xs"><i class="fa fa-search"></i></a>
-                </li>
-              </ul>
-               <form class="navbar-form navbar-left navbar-search-form" role="search">                  
-                 <div class="form-group">
-                      <input type="text" value="" class="form-control" placeholder="Search...">
-                 </div> 
-              </form>
-              <ul class="nav navbar-nav navbar-right">
-                    <!--insert social media here-->
-                  <div class="form-group">
-                   
-                      <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
-                      <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                      <a href="#"><i class="fa fa-envelope-o fa-2x"></i></a>
-                  </div>
-               </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-        <!-- START CAROUSEL -->
-        <div id="carousel">
-    <!--    
-            IMPORTANT - This carousel can have a special class for a smooth transition "gsdk-transition".
+<!-- START CAROUSEL -->
+<div id="carousel">
+    <!--  IMPORTANT - This carousel can have a special class for a smooth transition "gsdk-transition".
             Since javascript cannot be overwritten, if you want to use it, you can use the bootstrap.js
              or bootstrap.min.js from the GSDKit or you can open your bootstrap.js file, search for
-              "emulateTransitionEnd(600)" and change it with "emulateTransitionEnd(1200)"
-            
-    -->
+              "emulateTransitionEnd(600)" and change it with "emulateTransitionEnd(1200)"  -->
+
     <div id="carousel-example-generic" class="carousel slide gsdk-transition" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -160,11 +37,7 @@
         </div>
         <div class="item">
           <img src="assets/img/snake-wide.jpg">
-=======
-            <div class="item">
-              <img src="assets/img/snake-wide.jpg">
-            </div>
-          </div>
+        </div> <!-- END carousel-inner class -->
 
           <!-- Controls -->
           <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -173,10 +46,10 @@
           <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
             <span class="fa fa-angle-right"></span>
           </a>
->>>>>>> Stashed changes
-        </div>
-    </div>
-<!-- END CAROUSEL -->
+        </div> <!-- END carousel-inner class -->
+    </div> <!-- END carousel-example-generic class -->
+
+</div><!-- END CAROUSEL id -->
         
 <!-- THIS IS LARGE BLURRED IMAGE UNDER NAV BAR
      <div class="blurred-container">
@@ -210,7 +83,7 @@
     <!---------- PARALlAX EFFECT HERE ------->
     <section id="blog-title" data-speed="4" data-type="background">
         <div class="container">
-            <p class="title-font">BLOG</p>
+            <p class="title-font">BLOGS</p>
         </div>
     </section>
     <!---------- END PARA EFFECT HERE -------->
@@ -242,7 +115,7 @@
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-6">
-                 <H2>Portraits for sale!
+                <H2>Portraits for sale!
                 <br>
                 <small>8.4.2015 12:30AM by Amanda</small></H2><p>Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
@@ -260,8 +133,9 @@
     <!-----------TEST BLOG 3---------->
         <div class="row">
             <div class="col-lg-1"></div>
-            <div class="col-lg-3"><img src="assets/img/girldogcolor.jpg" class="img-responsive" width="284" height="186">
-             </div>
+            <div class="col-lg-3">
+                <img src="assets/img/girldogcolor.jpg" class="img-responsive" width="284" height="186">
+            </div>
             <div class="col-lg-6">
                 <H2>Digital Art
                 <br>
@@ -276,8 +150,8 @@
             </div>
             <div class="col-lg-3"></div>
         </div>
-
     </section>
+
     <section id="about-title" data-speed="4" data-type="background">
         <div class="container">
             <p class="title-font">ABOUT</p>
@@ -303,6 +177,7 @@
             <div class="col-lg-3"></div>
         </div>
         </section>
+
     <section id="contact-title" data-speed="4" data-type="background">
     <div class="container">
         <p class="title-font">CONTACT</p>
@@ -326,4 +201,4 @@
 </div>
 <!-- end main -->
 
-<?php include "footer.php"; ?>
+<?php include_once ("footer.php"); ?>
