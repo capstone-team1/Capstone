@@ -63,7 +63,8 @@
                 <!--<div class="col-md-2"></div>-->
                 <div class="col-sm-1"></div>
                 <div class="col-sm-3"><img src="assets/img/phoenix.jpg" alt="Tattoo's"
-                    class="img-circle" width="200" height="200"><h3 class="center-text">Tattoo's</h3>
+                    class="img-circle" width="200" height="200">
+                    <h3 class="center-text">Tattoo's</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. </p></div>
 
@@ -73,14 +74,17 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. </p></div>
 
-                    <div class="col-sm-3"><img src="assets/img/amanda.jpg" alt="About" class="img-circle"
-                                               width="200" height="200"><h3>About</h3>
+                    <div class="col-sm-3"><img src="assets/img/amanda.jpg" alt="About"
+                        class="img-circle" width="200" height="200">
+                        <h3>About</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. </p></div>
                 <div class="col-lg-1"></div>
             </div>
     </section>
     <!---------- PARALlAX EFFECT HERE ------->
+
+    <a name="blogs-jump" class="jumps"> </a>
     <section id="blog-title" data-speed="4" data-type="background">
         <div class="container">
             <p class="title-font">BLOGS</p>
@@ -152,6 +156,7 @@
         </div>
     </section>
 
+    <a name="about-jump"> </a>
     <section id="about-title" data-speed="4" data-type="background">
         <div class="container">
             <p class="title-font">ABOUT</p>
@@ -163,7 +168,7 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
-                sit amet,                 consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore.</p></div>
             <div class="col-lg-4"><img src="assets/img/amanda3.jpg" class="img-thumbnail" width=50% height=50%></div>
@@ -178,6 +183,7 @@
         </div>
         </section>
 
+    <a name="contact-jump"> </a>
     <section id="contact-title" data-speed="4" data-type="background">
     <div class="container">
         <p class="title-font">CONTACT</p>

@@ -83,8 +83,8 @@
                 </li>
                   <li><a href="#about-jump">About</a></li>
                   <li><a href="#contact-jump">Contact</a></li>
-                  <li><a href="#">Links</a></li>
-                  <li><a href="#blog-jump">Blogs</a></li>
+                  <li><a href="links.php">Links</a></li>
+                  <li><a href="#blogs-jump">Blogs</a></li>
                 <li>
                     <a href="javascript:void(0);" data-toggle="search" class="hidden-xs"><i class="fa fa-search"></i></a>
                 </li>
