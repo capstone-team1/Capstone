@@ -117,5 +117,22 @@ switch($action){
 
         break;
 
+    case "delete":
+
+        $full_id = $_GET['id'];
+
+        $id = str_replace("delete_", "", $full_id);
+
+
+
+        $sql = "DELETE FROM blogs WHERE blog_id =  '$id' ";
+
+        $db->exec($sql);
+
+        $results = $sql;
+
+        print_r(json_encode($results));
+
+        break;
 }
 

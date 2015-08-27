@@ -44,26 +44,44 @@ $(document).ready(function()
         {
             //build table
             //loop data
-            $.each(data, function(key, value){
+            $.each(data, function(key, value) {
                 strTable += "<tr id=' + key + '><td>" + value.image + "</td>";
                 strTable += "<td>" + value.upload_date + "</td>";
                 strTable += "<td>" + value.title + "</td>";
-                strTable += "<td>" + "<a href='#' id='edit_" + value.blog_id + "'>EDIT</a></td>";
-                strTable += "<td>" + "<a href='#' id='delete_" + value.blog_id + "'>DELETE</a></td>";
+                strTable += "<td>" + "<a href='#' id='edit_" + value.id + "'>EDIT</a></td>";
+                strTable += "<td>" + "<a href='#' class ='delete_blog' id='delete_" + value.id + "'>DELETE</a></td>";
+            });
+
+            //Gets the value of each unique id to set up
+            
+            $(document).on('click', ".delete_blog", function(e) {
+                var id = $(this).attr('id');
+               // if(confirm("Are you sure you want to delete this blog?")) {
+                        //location.reload();
+                $.get("admin_controller.php", {action:"delete", id:id}, function(data) {
+                    alert(data);
                 });
+            });
 
             strTable += "</tbody></table>";
 
             $("#list_blogs").html(strTable);
+
+
         });
+
+
     });
 
+
+
+
     //To use dynamically created buttons you must use $(static_parent).on("action", "Dynamic Child", function)
-    $("#page-content-wrapper").on("click", "#Add_Blogs", function(e)
+    $("#page-content-wrapper").on("click", "#Add_blogs", function(e)
     {
         clear_html("#page-content-wrapper");
         var blog_form =
-            "<div class='add_blog'>" +
+            "<div class='blog_form'>" +
                 "<form method='post' action=''>" +
                 " <label>Blog Title" +
                     "<input type='text' name='blog_title'></label>" +
@@ -114,12 +132,12 @@ $(document).ready(function()
         });
     });
 
-    $("#page-content-wrapper").on("click", "#Add_Images", function(e)
+    $("#page-content-wrapper").on("click", "#Add_images", function(e)
     {
         clear_html("#page-content-wrapper");
 
         var image_form =
-            "<div class='add_image'>" +
+            "<div class='image_form'>" +
                 "<form method='post' action=''>" +
                     "<label>Image Title" +
                     "<input type='text' name='image_title'></label>" +
@@ -168,6 +186,10 @@ $(document).ready(function()
             $("#list_links").html(strTable);
 
         });
+    });
+
+    $(document).on("click", "#delete", function(e) {
+
     });
 });
 
