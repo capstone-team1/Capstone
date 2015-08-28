@@ -71,7 +71,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
                 <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
                       <ul class="dropdown-menu">
@@ -81,10 +81,10 @@
                         <li><a href="#">Separated link</a></li>
                       </ul>
                 </li>
-                  <li><a href="#about-jump">About</a></li>
-                  <li><a href="#contact-jump">Contact</a></li>
+                  <li><a href="index.php#about-jump">About</a></li>
+                  <li><a href="index.php#contact-jump">Contact</a></li>
                   <li><a href="links.php">Links</a></li>
-                  <li><a href="#blogs-jump">Blogs</a></li>
+                  <li><a href="index.php#blogs-jump">Blogs</a></li>
                 <li>
                     <a href="javascript:void(0);" data-toggle="search" class="hidden-xs"><i class="fa fa-search"></i></a>
                 </li>
