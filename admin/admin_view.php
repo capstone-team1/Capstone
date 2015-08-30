@@ -42,9 +42,6 @@
                 </a>
             </li>
             <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li>
                <a href="#" id="Images">Images</a>
             </li>
             <li>
