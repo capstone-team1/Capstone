@@ -6,8 +6,9 @@
  * Time: 10:32 AM
  */
 
-require_once("database.php");
-//require_once("../CMS Testing/image_class.php");
+require_once("../CMS Testing/database.php");
+require_once("../CMS Testing/image_class.php");
+require_once("../CMS Testing/blog_class.php");
 
 if (isset($_GET['action'])){
     $action = $_GET['action'];
@@ -17,15 +18,24 @@ if (isset($_GET['action'])){
 
 switch($action) {
 
-    case "show_images_all":
+    case "show_images_All":
 
-        /*class Image_content
-        {
-            public $image;
-            public $upload_date;
-        }*/
+        $sql = mysql_query("SELECT image_id, image, image_upload_date
+                              FROM images
+                              ORDER BY image_upload_date");
 
-        //GET IMAGES FROM DATABASE
+        while ($row = mysql_fetch_array($sql)) {
+            echo '<img src="' . $row['image'] . '" />';
+        }
+
+
+    /*        class Image_Content
+            {
+                public $image_id;
+                public $image;
+                public $upload_date;
+            }
+
         $sql = "SELECT image_id, image, image_upload_date
                 FROM images
                 ORDER BY image_upload_date";
@@ -38,9 +48,9 @@ switch($action) {
 
             $all_images = new Image_Content();
 
-            $all_images->img_id = $image['image_id'];
-            $all_images->img = $image['image'];
-            $all_images->img_upload_date = $image['image_upload_date'];
+            $all_images->image_id = $image['image_id'];
+            $all_images->image = $image['image'];
+            $all_images->image_upload_date = $image['image_upload_date'];
 
             array_push($display_images, $all_images);
         }
@@ -82,6 +92,6 @@ switch($action) {
 
         break;
 
-    case "show_images_drawings":
+    case "show_images_drawings":*/
 
 }
