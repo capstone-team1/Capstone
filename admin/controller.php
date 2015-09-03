@@ -1,34 +1,19 @@
 <?php
 header('Content-Type: application/json');
 
-require_once("database.php");
-require_once("../Classes/blog_class.php");
 require_once("../Classes/image_class.php");
+require_once("../Classes/link_class.php");
+require_once("../Classes/blog_class.php");
+require_once("../Database/database.php");
 
-
-if (isset($_POST['add_image'])) {
-    $action = $_POST['add_image'];
-} elseif (isset($_POST['add_blog'])) {
-    $action = $_POST['add_blog'];
-} elseif (isset($_GET['action'])) {
-    $action = $_GET['action'];
-} else {
-    $action = "list_blogs";
-}
-
-//Object Oriented..WORKS!!
-switch($action)
-{
-
-    case "add_blog":
+    if(isset($_POST['blog_title'])) {
 
         $blog_post = new Blog(
             get_date_sql_format(),
             $_POST['blog_title'],
             $_POST['blog_image'],
-            $_POST['blog_content']);
-
-        //print $blog_post->get_blog_content();
+            $_POST['blog_content']
+        );
 
         $blog_date = $blog_post->get_blog_date();
         $blog_title = $blog_post->get_blog_title();
@@ -36,21 +21,21 @@ switch($action)
         $blog_content = $blog_post->get_blog_content();
 
         $sql = "INSERT INTO blogs (blog_post_date, blog_title, blog_image, blog_content)
-                      VALUES ('$blog_date', '$blog_title', '$blog_image', '$blog_content')";
+                          VALUES ('$blog_date', '$blog_title', '$blog_image', '$blog_content')";
 
         $query = $db->prepare($sql);
         $query->execute();
+    }
 
-        break;
-
-    case "add_image":
+    if(isset($_POST['image_title'])) {
 
         $add_image = new Image(
             get_date_sql_format(),
             $_POST['image_title'],
             $_POST['image_type'],
             $_POST['image_tags'],
-            $_POST['image']);
+            $_POST['image']
+        );
 
         $image_date = $add_image->get_image_date();
         $image_title = $add_image->get_image_title();
@@ -63,12 +48,33 @@ switch($action)
 
         $query = $db->prepare($sql);
         $query->execute();
+    }
 
-        echo "Image Added!";
+    if(isset($_POST['link_title'])) {
+        $add_link = new Link(
+            $_POST['link_title'],
+            $_POST['link_description'],
+            $_POST['link_image']
+        );
 
-        break;
+        $link_title = $add_link->get_link_title();
+        $link_description = $add_link->get_link_description();
+        $link_image = $add_link->get_link_image();
 
-    case "list_blogs":
+        $sql = "INSERT INTO links (link_title, link_description, link_image)
+                        VALUES ('$link_title', '$link_description', '$link_image')";
+
+        $query = $db->prepare($sql);
+        $query->execute();
+    }
+
+if(isset($_GET['action'])) {
+    $action = $_GET['action'];
+}
+
+    switch ($action){
+
+        case "list_blogs":
 
         class Blog_content
         {
@@ -101,42 +107,42 @@ switch($action)
 
         break;
 
-    case "list_images":
+        case "list_images":
 
-        class Image_content
-        {
-            public $id;
-            public $image;
-            public $upload_date;
-            public $title;
-            public $category;
-            public $tags;
-        }
+            class Image_content
+            {
+                public $id;
+                public $image;
+                public $upload_date;
+                public $title;
+                public $category;
+                public $tags;
+            }
 
-        $sql = "SELECT image_id, image_upload_date, image_title, image_category, image_tags, image
-                FROM images ORDER BY image_upload_date DESC";
+            $sql = "SELECT image_id, image_upload_date, image_title, image_category, image_tags, image
+                    FROM images ORDER BY image_upload_date DESC";
 
-        $get_images = $db->query($sql);
+            $get_images = $db->query($sql);
 
-        $display_images = [];
+            $display_images = [];
 
-        foreach($get_images as $row)
-        {
-            $all_images = new Image_content();
+            foreach($get_images as $row)
+            {
+                $all_images = new Image_content();
 
-            $all_images->id = $row['image_id'];
-            $all_images->upload_date = $row['image_upload_date'];
-            $all_images->title = $row['image_title'];
-            $all_images->category = $row['image_category'];
-            $all_images->tags = $row['image_tags'];
-            $all_images->image = $row['image'];
+                $all_images->id = $row['image_id'];
+                $all_images->upload_date = $row['image_upload_date'];
+                $all_images->title = $row['image_title'];
+                $all_images->category = $row['image_category'];
+                $all_images->tags = $row['image_tags'];
+                $all_images->image = $row['image'];
 
-            array_push($display_images, $all_images);
-        }
+                array_push($display_images, $all_images);
+            }
 
-        print_r(json_encode($display_images));
+            print_r(json_encode($display_images));
 
-        break;
+            break;
 
     case "list_links":
 
@@ -170,21 +176,20 @@ switch($action)
         print_r(json_encode($display_links));
 
         break;
-
-    case "delete":
-
-        $full_id = $_GET['id'];
-
-        $id = str_replace("delete_", "", $full_id);
-
-        $sql = "DELETE FROM blogs WHERE blog_id =  '$id' ";
-
-        $db->exec($sql);
-
-        $results = $sql;
-
-        print_r(json_encode($results));
-
-        break;
+//
+//    case "delete":
+//
+//        $full_id = $_GET['id'];
+//
+//        $id = str_replace("delete_", "", $full_id);
+//
+//        $sql = "DELETE FROM blogs WHERE blog_id =  '$id' ";
+//
+//        $db->exec($sql);
+//
+//        $results = $sql;
+//
+//        print_r(json_encode($results));
+//
+//        break;
 }
-

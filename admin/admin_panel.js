@@ -2,6 +2,25 @@ function clear_html(id)
 {
     $(id).html("");
 }
+function ajaxToController(formData) {
+    // process the form
+    $.ajax({
+        type: 'POST', // define the type of HTTP
+        url: 'controller.php', // the url where we want to POST
+        data: formData, // our data object
+        dataType: 'json', // what type of data do we expect back from the server
+        encode: true
+    })
+        // using the done promise callback
+        .done(function (data) {
+
+            // log data to the console so we can see
+            console.log(data);
+
+            // here we will handle errors and validation messages
+        });
+
+}
 
 //Dynamically creates a header and names button ID's
 function admin_header(admin_title) {
@@ -66,30 +85,45 @@ $(document).ready(function() {
     });
     //To use dynamically created buttons you must use $(static_parent).on("action", "Dynamic Child", function)
     $("#page-content-wrapper").on("click", "#Add_blogs", function(e) {
+        e.preventDefault();
         clear_html("#page-content-wrapper");
         var blog_form =
             "<div class='blog_form'>" +
-                "<form method='post' action='controller.php' target='_self'>" +
-                    "<label>Blog Title" +
-                    "<input type='text' name='blog_title'></label>" +
-                    "<br>" +
-                    "<label>Blog Image" +
-                    "<input type='file' name='blog_image'></label>" +
-                    "<br>" +
-                    "<label>Blog Content" +
-                    "<textarea cols='25' rows=10' name='blog_content'></textarea></label>" +
-                    "<br>" +
-                    "<input type='submit' name='add_blog' value='add_blog'>" +
-                "</form>" +
+            "<form method='post' id='add_blog_form' action='controller.php'>" +
+            "<label>Blog Title" +
+            "<input type='text' name='blog_title'></label>" +
+            "<br>" +
+            "<label>Blog Image" +
+            "<input type='file' name='blog_image'></label>" +
+            "<br>" +
+            "<label>Blog Content" +
+            "<textarea cols='25' rows=10' id='blog_content' name='blog_content'></textarea></label>" +
+            "<br>" +
+            "<button type='submit' id='submit_blog' name='add_blog' value='Add Blog'>Add Blog</button>" +
+            "</form>" +
             "</div>";
         $("#page-content-wrapper").html(blog_form);
+
+        $("form").submit(function (e) {
+            e.preventDefault();
+            var formData = {
+                //'action': "add"
+                'blog_title': $('input[name=blog_title]').val(),
+                'blog_image': $('input[name=blog_image]').val(),
+                'blog_content': $('#blog_content').val()
+            };
+            ajaxToController(formData);
+        });
+
     });
+
+
+
 
 
 //********************** IMAGES ************************
 
-    $("#Images").on("click", function (e)
-    {
+    $("#Images").on("click", function(e) {
         clear_html("#page-content-wrapper");
 
         $("#page-content-wrapper").html(admin_header("Images"));
@@ -142,6 +176,17 @@ $(document).ready(function() {
                 "</form>" +
             "</div>";
         $("#page-content-wrapper").html(image_form);
+        $("form").submit(function (e) {
+            e.preventDefault();
+            var formData = {
+                //'action': "add"
+                'image_title': $('input[name=image_title]').val(),
+                'image_type': $('input[name=image_type]').val(),
+                'image_tags': $('input[name=image_tags]').val(),
+                'image': $('input[name=image]').val()
+            };
+            ajaxToController(formData);
+        });
     });
 
 //*********************** LINKS ***********************************
