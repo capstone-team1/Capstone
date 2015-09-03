@@ -1,6 +1,6 @@
 <?php
 
-class link_class
+class Link
 {
 
     public function __construct($link_title, $link_description, $link_image)
@@ -22,7 +22,7 @@ class link_class
 
     public function set_link_description($value)
     {
-        $this->link_title = $value;
+        $this->link_description = $value;
     }
 
     public function get_link_description()
