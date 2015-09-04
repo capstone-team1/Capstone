@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- end main -->
 
         <div class="footer">
@@ -26,3 +27,6 @@
     </body>
 
 </html>
+=======
+<?php
+>>>>>>> master

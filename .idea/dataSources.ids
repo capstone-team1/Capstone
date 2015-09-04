@@ -17,18 +17,18 @@
     </table>
     <table name="images" schema="" catalog="tattoos_by_amanda" type="TABLE">
       <column name="image_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="image_upload_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="image_upload_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="image_title" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
-      <column name="image_type" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="image_category" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="image_tags" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="image" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4"/>
       <primary-key name="PRIMARY" columns="image_id"/>
     </table>
     <table name="links" schema="" catalog="tattoos_by_amanda" type="TABLE">
       <column name="link_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="link_post_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
       <column name="link_title" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="link_description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="link_image" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4"/>
       <primary-key name="PRIMARY" columns="link_id"/>
     </table>
     <table name="login" schema="" catalog="tattoos_by_amanda" type="TABLE">

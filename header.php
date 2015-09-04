@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -46,6 +47,9 @@
 
 <div id="navbar-full">
 
+=======
+<div id="navbar-full">
+>>>>>>> master
     <div id="navbar">
     <!-- navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange -->
         <nav class="navbar navbar-ct-red navbar-transparent navbar-fixed-top" role="navigation">
@@ -71,7 +75,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
+<<<<<<< HEAD
                 <li class="active"><a href="index.php">Home</a></li>
+=======
+                <li class="active"><a href="#">Home</a></li>
+>>>>>>> master
                 <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
                       <ul class="dropdown-menu">
@@ -81,14 +89,22 @@
                         <li><a href="#">Separated link</a></li>
                       </ul>
                 </li>
+<<<<<<< HEAD
                   <li><a href="index.php#about-jump">About</a></li>
                   <li><a href="index.php#contact-jump">Contact</a></li>
                   <li><a href="links.php">Links</a></li>
                   <li><a href="index.php#blogs-jump">Blogs</a></li>
+=======
+                  <li><a href="#about-jump">About</a></li>
+                  <li><a href="#contact-jump">Contact</a></li>
+                  <li><a href="#">Links</a></li>
+                  <li><a href="#blog-jump">Blogs</a></li>
+>>>>>>> master
                 <li>
                     <a href="javascript:void(0);" data-toggle="search" class="hidden-xs"><i class="fa fa-search"></i></a>
                 </li>
               </ul>
+<<<<<<< HEAD
                 <form class="navbar-form navbar-left navbar-search-form" role="search">
                    <div class="form-group">
                       <input type="text" value="" class="form-control" placeholder="Search...">
@@ -97,6 +113,17 @@
               <ul class="nav navbar-nav navbar-right">
                     <!--insert social media here-->
                   <div class="form-group">
+=======
+               <form class="navbar-form navbar-left navbar-search-form" role="search">
+                 <div class="form-group">
+                      <input type="text" value="" class="form-control" placeholder="Search...">
+                 </div>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                    <!--insert social media here-->
+                  <div class="form-group">
+
+>>>>>>> master
                       <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
                       <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
                       <a href="#"><i class="fa fa-envelope-o fa-2x"></i></a>
@@ -104,6 +131,7 @@
                </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
+<<<<<<< HEAD
         </nav> <!-- end nav -->
 
         <!-- THIS IS LARGE BLURRED IMAGE UNDER NAV BAR
@@ -114,3 +142,12 @@
 
 </div> <!-- END navbar-full -->
 
+=======
+        </nav>
+</head>
+
+<body>
+</body>
+
+</html>
+>>>>>>> master
