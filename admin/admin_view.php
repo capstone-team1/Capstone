@@ -45,7 +45,7 @@
                <a href="#" id="Images">Images</a>
             </li>
             <li>
-                <a href="#" id="Blogs">Blog</a>
+                <a href="Blogs" id="Blogs">Blog</a>
             </li>
             <li>
                 <a href="#">Carousel</a>
