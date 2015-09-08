@@ -1,3 +1,4 @@
+<<<<<<< HEAD:index.html
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
 
     <!--Parallax JS-->
     <script src="/assets/js/parallax.js" type=text/javascript></script>
-
+M
     <!--JQuery-->
     <script src="assets/jquery/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
@@ -149,17 +150,61 @@
                     <span class="fa fa-angle-right"></span>
                 </a>
             </div>
+=======
+<!--FACBOOK INIT-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<?php include_once("header.php"); ?>
+
+<!-- START CAROUSEL -->
+<div id="carousel">
+    <!--  IMPORTANT - This carousel can have a special class for a smooth transition "gsdk-transition".
+            Since javascript cannot be overwritten, if you want to use it, you can use the bootstrap.js
+             or bootstrap.min.js from the GSDKit or you can open your bootstrap.js file, search for
+              "emulateTransitionEnd(600)" and change it with "emulateTransitionEnd(1200)"  -->
+
+<div id="carousel-example-generic" class="carousel slide gsdk-transition" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item">
+            <img src="assets/img/snake-wide.jpg">
         </div>
-        <!-- END CAROUSEL -->
+        <div class="item active">
+            <img src="assets/img/snake-wide.jpg">
+>>>>>>> 1d4e113da591710600bd7cb2d26a033a6ab4ef45:index.php
+        </div>
+        <div class="item">
+            <img src="assets/img/snake-wide.jpg">
+        </div>
+    </div>
 
-        <!-- THIS IS LARGE BLURRED IMAGE UNDER NAV BAR
-             <div class="blurred-container">
-                    <div class="img-src" style="background-image: url('assets/img/wallpaper1.jpg')"></div>
-            </div>
-        -->
-    </div><!--  end navbar -->
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="fa fa-angle-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="fa fa-angle-right"></span>
+    </a>
+</div> <!-- END CAROUSEL -->
 
-</div> <!-- end menu-dropdown -->
+<!-- THIS IS LARGE BLURRED IMAGE UNDER NAV BAR
+     <div class="blurred-container">
+            <div class="img-src" style="background-image: url('assets/img/wallpaper1.jpg')"></div>
+    </div>  -->
 
 <!--PARALLAX-->
 <div class="main">
@@ -382,25 +427,8 @@
             </div>
         </div>
     </section>
-    <!-- end container -->
+<!-- end container -->
 </div>
 <!-- end main -->
 
-<div class="footer">
-    <!--<div class="overlayer">-->
-    <!--<div class="container">-->
-    <!--<div class="row support">-->
-    <!--<div class="col-sm-4">-->
-    <!--<i class="fa fa-copyright"></i>-->
-    <!--</div>-->
-    <!--</div>-->
-    <div class="row">
-        <div class="credits">
-            &copy; 2015 Amanda Orcutt
-        </div>
-    </div>
-    <!--</div>-->
-    <!--</div>-->
-</div>
-</body>
-</html>
+<?php include_once("footer.php"); ?>
